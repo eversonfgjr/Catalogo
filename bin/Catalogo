@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+function usage() {
+    console.log('Usage:');
+    console.log('  Catalogo');
+    console.log('  Catalogo --help');
+}
+
+const args = process.argv.slice(2);
+if (args.indexOf('--help') >= 0) {
+    usage();
+    process.exit(0);
+} else {
+    require('../index');
+}
